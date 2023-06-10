@@ -5,7 +5,7 @@ maxuiux OS PC
 [https://maxuiux.github.io/muiuxos/](https://maxuiux.github.io/muiuxos/)
 
 ### Author Name OS Preview - muiuxos
-+ © copyright maxuiux
+- © copyright maxuiux
 
 ### Author Logo muiuxos
 © copyright maxuiux
