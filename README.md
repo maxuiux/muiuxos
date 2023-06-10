@@ -1,6 +1,9 @@
 # muiuxos - 2023 © copyright maxuiux
 maxuiux OS PC
 
+### link OS Preview - muiuxos
+[https://github.com/maxuiux/muiuxos](https://github.com/maxuiux/muiuxos)
+
 ### Author Name OS Preview - muiuxos
 © copyright maxuiux
 
