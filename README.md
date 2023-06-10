@@ -2,7 +2,7 @@
 maxuiux OS PC
 
 ### link OS Preview - muiuxos
-[https://github.com/maxuiux/muiuxos](https://github.com/maxuiux/muiuxos)
+[https://maxuiux.github.io/muiuxos/](https://maxuiux.github.io/muiuxos/)
 
 ### Author Name OS Preview - muiuxos
 © copyright maxuiux
