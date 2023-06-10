@@ -44,7 +44,7 @@ HTML/SCSS/JS
 ### Weather Animation JS
 Author aymks
 [credits to](https://codepen.io/Nvagelis/pen/yaQGrL)
-[Check my github :D][https://github.com/aymks]
+[Check my github :D](https://github.com/aymks)
 
 ## Sound / Music
 [https://mixkit.co/](https://mixkit.co/)
