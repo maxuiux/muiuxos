@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="shortcut icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+	<link rel="shortcut icon" href="img/favicons/favicon.webp" type="image/webp">
+	<link rel="shortcut icon" href="img/favicons/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet">
+	<title>MuiuxOS</title>
+</head>
+
+<body>
+	<header class="header"></header>
+
+	
+	<div class="loading">
+    <div class="loading__inner">
+        <div class="loading__icon">
+            <svg>
+                <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+        </div>
+        <div class="loading__title">
+            MuiuxOS
+        </div>
+        <div class="loading__progress"></div>
+    </div>
+    <audio src="sound/load-sound.wav" autoplay>
+        <source src="sound/load-sound.wav" type="audio/wav">
+    </audio>
+</div>
+
+<span id="pcactive" class="pcactive">
+<ul class="context-menu" id="context-menu">
+    <li class="context-menu__item">
+        <span class="context-menu__item-icon">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-create"></use>
+            </svg>
+        </span>
+        <span class="context-menu__item-text">
+            Create
+        </span>
+        <ul class="context-menu__sub">
+            <li class="context-menu__item context-menu__sub-item">
+                <span class="context-menu__item-icon">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#icon-folder"></use>
+                    </svg>
+                </span>
+                <span class="context-menu__item-text">
+                    Folder
+                </span>
+            </li>
+            <li class="context-menu__item context-menu__sub-item">
+                <span class="context-menu__item-icon">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#icon-zip"></use>
+                    </svg>
+                </span>
+                <span class="context-menu__item-text">
+                    ZIP File
+                </span>
+            </li>
+            <li class="context-menu__item context-menu__sub-item btn-create-table">
+                <span class="context-menu__item-icon">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#icon-table"></use>
+                    </svg>
+                </span>
+                <span class="context-menu__item-text">
+                    Table
+                </span>
+            </li>
+            <li class="context-menu__item context-menu__sub-item btn-create-doc">
+                <span class="context-menu__item-icon">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#icon-doc"></use>
+                    </svg>
+                </span>
+                <span class="context-menu__item-text">
+                    Document
+                </span>
+            </li>
+            <li class="context-menu__item context-menu__sub-item btn-create-slides">
+                <span class="context-menu__item-icon">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#icon-slides"></use>
+                    </svg>
+                </span>
+                <span class="context-menu__item-text">
+                    Presentation
+                </span>
+            </li>
+        </ul>
+    </li>
+    <li class="context-menu__item">
+        <span class="context-menu__item-icon">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-zip"></use>
+            </svg>
+        </span>
+        <span class="context-menu__item-text">
+            Compress to ZIP
+        </span>
+    </li>
+    <li class="context-menu__item">
+        <span class="context-menu__item-icon">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-task-manager"></use>
+            </svg>
+        </span>
+        <span class="context-menu__item-text">
+            Task Manager
+        </span>
+    </li>
+    <li class="context-menu__item">
+        <span class="context-menu__item-icon">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-widgets"></use>
+            </svg>
+        </span>
+        <span class="context-menu__item-text">
+            Widgets
+        </span>
+    </li>
+    <li class="context-menu__item">
+        <span class="context-menu__item-icon">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-settings"></use>
+            </svg>
+        </span>
+        <span class="context-menu__item-text">
+            Customizing
+        </span>
+    </li>
+    <ul class="context-menu__nav">
+        <li class="context-menu__nav-item">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-theme"></use>
+            </svg>
+        </li>
+        <a href="/" class="context-menu__nav-item">
+            <svg>
+                <use xlink:href="img/sprite.svg#refresh"></use>
+            </svg>
+        </a>
+        <li class="context-menu__nav-item">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-paste"></use>
+            </svg>
+        </li>
+        <li class="context-menu__nav-item">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-cut"></use>
+            </svg>
+        </li>
+        <li class="context-menu__nav-item">
+            <svg>
+                <use xlink:href="img/sprite.svg#icon-copy"></use>
+            </svg>
+        </li>
+    </ul>
+</ul>
+
+<div class="window window-folder">
+    <div class="window__inner">
+        <div class="window__content">
+            <div class="window-panel-top">
+                <div class="window-panel-top__inner">
+                    <div class="window-panel-top__item">
+                        <div class="window-panel-top__item-title">
+                            Folder
+                        </div>
+                    </div>
+                    <div class="window-panel-top__item">
+                        <div class="window-panel-top__item-fold btn-window-fold">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#icon-fold"></use>
+                            </svg>
+                        </div>
+                        <div class="window-panel-top__item-expand btn-window-expand">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#icon-expand"></use>
+                            </svg>
+                        </div>
+                        <div class="window-panel-top__item-close btn-window-close">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="window-folder__wrapper">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="window window-cmd">
+    <div class="window__inner window-cmd__inner">
+        <div class="window__content window-cmd__content">
+            <div class="window-panel-top">
+                <div class="window-panel-top__inner">
+                    <div class="window-panel-top__item">
+                        <div class="window-tabs">
+                            <div class="window-tabs__items">
+                                <div class="window-tabs__item">
+                                    <div class="window-tabs__item-title">
+                                        -bash
+                                    </div>
+                                </div>
+                                <div class="window-tabs__item">
+                                    <div class="window-tabs__item-plus">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="window-panel-top__item">
+                        <div class="window-panel-top__item-fold btn-window-fold2">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#icon-fold"></use>
+                            </svg>
+                        </div>
+                        <div class="window-panel-top__item-expand btn-window-expand2">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#icon-expand"></use>
+                            </svg>
+                        </div>
+                        <div class="window-panel-top__item-close btn-window-close2">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="window-cmd__console">
+                <textarea class="window-cmd__console-input">                                  </textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="window window-browser">
+    <div class="window__inner window-browser__inner">
+        <div class="window__content">
+            <div class="window-panel-top">
+                <div class="window-panel-top__inner">
+                    <div class="window-panel-top__item">
+                        <div class="window-tabs">
+                            <div class="window-tabs__items">
+                                <div class="window-tabs__item">
+                                    <div class="window-tabs__item-title">
+                                        Maxuiux Portfolio
+                                    </div>
+                                </div>
+                                <div class="window-tabs__item">
+                                    <div class="window-tabs__item-plus">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="window-panel-top__item">
+                        <div class="window-panel-top__item-fold btn-window-fold3">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#icon-fold"></use>
+                            </svg>
+                        </div>
+                        <div class="window-panel-top__item-expand btn-window-expand3">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#icon-expand"></use>
+                            </svg>
+                        </div>
+                        <div class="window-panel-top__item-close btn-window-close3">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="window-browser__inner">
+                <div class="window-browser__item">
+                    <input type="text" value="https://maxuiux.github.io/portfolio/">
+                </div>
+                <div class="window-browser__item">
+                    <iframe src="https://maxuiux.github.io/portfolio/" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="window window-weather">
+    <audio id="rain-sound" src="sound/rain.wav" loop>
+        <source src="sound/rain.wav" type="audio/wav">
+    </audio>
+    <div class="window__inner window-weather__inner">
+        <div class="window__content">
+            <div class="window-panel-top">
+                <div class="window-panel-top__inner">
+                    <div class="window-panel-top__item">
+                        <div class="window-panel-top__item-title">
+                            Weather
+                        </div>
+                    </div>
+                    <div class="window-panel-top__item">
+                        <div class="window-panel-top__item-close btn-window-close5">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#icon-close"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="window-weather-info">
+                <canvas id="canvas1"></canvas>
+                <canvas id="canvas2"></canvas>
+                <canvas id="canvas3"></canvas>
+                <div class="window-weather-info__inner">
+                    <div class="window-weather-info__item">
+                        <div class="widget-weather">
+                            <div class="widget-weather-sun"></div>
+                            <div class="widget-weather-title">
+                                18°C
+                            </div>
+                        </div>
+                    </div>
+                    <div class="window-weather-info__item">
+                        <div class="window-weather-days">
+                            <div class="window-weather-days__items">
+                                <div class="window-weather-days__item">
+                                    <div class="window-weather-days__item-title">
+                                        Su
+                                    </div>
+                                    <div class="window-weather-days__item-icon">
+                                        <div class="widget-weather">
+                                            <div class="widget-weather-sun"></div>
+                                            <div class="widget-weather-title">
+                                                18°C
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="window-weather-days__item">
+                                    <div class="window-weather-days__item-title">
+                                        Mo
+                                    </div>
+                                    <div class="window-weather-days__item-icon">
+                                        <div class="widget-weather">
+                                            <div class="widget-weather-sun"></div>
+                                            <div class="widget-weather-title">
+                                                16°C
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="window-weather-days__item">
+                                    <div class="window-weather-days__item-title">
+                                        Tu
+                                    </div>
+                                    <div class="window-weather-days__item-icon">
+                                        <div class="widget-weather">
+                                            <div class="widget-weather-sun"></div>
+                                            <div class="widget-weather-title">
+                                                23°C
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="window-weather-days__item">
+                                    <div class="window-weather-days__item-title">
+                                        We
+                                    </div>
+                                    <div class="window-weather-days__item-icon">
+                                        <div class="widget-weather">
+                                            <div class="widget-weather-sun"></div>
+                                            <div class="widget-weather-title">
+                                                26°C
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="window-weather-days__item">
+                                    <div class="window-weather-days__item-title">
+                                        Th
+                                    </div>
+                                    <div class="window-weather-days__item-icon">
+                                        <div class="widget-weather">
+                                            <div class="widget-weather-sun"></div>
+                                            <div class="widget-weather-title">
+                                                33°C
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="window-weather-days__item">
+                                    <div class="window-weather-days__item-title">
+                                        Fr
+                                    </div>
+                                    <div class="window-weather-days__item-icon">
+                                        <div class="widget-weather">
+                                            <div class="widget-weather-sun"></div>
+                                            <div class="widget-weather-title">
+                                                28°C
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="window-weather-days__item">
+                                    <div class="window-weather-days__item-title">
+                                        Sa
+                                    </div>
+                                    <div class="window-weather-days__item-icon">
+                                        <div class="widget-weather">
+                                            <div class="widget-weather-sun"></div>
+                                            <div class="widget-weather-title">
+                                                26°C
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="window-weather-info__item">
+
+                    </div>
+                    <div class="window-weather-info__item">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="apps">
+    <div class="apps__inner">
+        <div class="apps__items">
+            <div class="apps__item" data-title="Browser">
+                <img src="img/sprite.svg#app-browser" alt="">
+                <div class="apps__item-title">
+                    Browser
+                </div>
+            </div>
+            <div class="apps__item" data-title="Console">
+                <img src="img/sprite.svg#app-console" alt="">
+                <div class="apps__item-title">
+                    Console
+                </div>
+            </div>
+            <div class="apps__item" data-title="Calculator">
+                <img src="img/sprite.svg#app-calculator" alt="">
+                <div class="apps__item-title">
+                    Calculator
+                </div>
+            </div>
+            <div class="apps__item" data-title="Games">
+                <img src="img/sprite.svg#app-games" alt="">
+                <div class="apps__item-title">
+                    Games
+                </div>
+            </div>
+            <div class="apps__item" data-title="Marketplace">
+                <img src="img/sprite.svg#app-marketplace" alt="">
+                <div class="apps__item-title">
+                    Marketplace
+                </div>
+            </div>
+            <div class="apps__item" data-title="Notes">
+                <img src="img/sprite.svg#app-notes" alt="">
+                <div class="apps__item-title">
+                    Notes
+                </div>
+            </div>
+            <div class="apps__item" data-title="Graphic Design">
+                <img src="img/sprite.svg#app-graphic-design" alt="">
+                <div class="apps__item-title">
+                    Graphic Design
+                </div>
+            </div>
+            <div class="apps__item" data-title="Table">
+                <img src="img/sprite.svg#icon-table" alt="">
+                <div class="apps__item-title">
+                    Table
+                </div>
+            </div>
+            <div class="apps__item" data-title="Doc">
+                <img src="img/sprite.svg#icon-doc" alt="">
+                <div class="apps__item-title">
+                    Doc
+                </div>
+            </div>
+            <div class="apps__item" data-title="Slides">
+                <img src="img/sprite.svg#icon-slides" alt="">
+                <div class="apps__item-title">
+                    Slides
+                </div>
+            </div>
+            <div class="apps__item" data-title="System Settings">
+                <img src="img/sprite.svg#app-settings" alt="">
+                <div class="apps__item-title">
+                    System Settings
+                </div>
+            </div>
+            <div class="apps__item" data-title="GitHub">
+                <img src="img/sprite.svg#app-github" alt="">
+                <div class="apps__item-title">
+                    GitHub
+                </div>
+            </div>
+            <a href="https://codepen.io/maxuiux" class="apps__item" data-title="CodePen" target="_blank">
+                <img src="img/sprite.svg#app-codepen" alt="">
+                <div class="apps__item-title">
+                    CodePen
+                </div>
+            </a>
+            <div class="apps__item" data-title="Behance">
+                <img src="img/sprite.svg#app-behance" alt="">
+                <div class="apps__item-title">
+                    Behance
+                </div>
+            </div>
+            <a href="https://maxuiux.github.io/portfolio/" class="apps__item" data-title="Maxuiux" target="_blank">
+                <img src="img/sprite.svg#app-maxuiux" alt="">
+                <div class="apps__item-title">
+                    Maxuiux
+                </div>
+            </a>
+        </div>
+        <div class="apps__search">
+            <input type="text" placeholder="search">
+        </div>
+    </div>
+</div>
+
+<div class="desktop-app">
+    <div class="desktop-app__inner">
+        <div class="desktop-app__items">
+            <a href="#folder" class="desktop-app__item desktop-app__item_folder" data-title="Folder">
+                <div class="desktop-app__item-icon">
+                    <img src="img/sprite.svg#app-folder" alt="">
+                </div>
+                <div class="desktop-app__item-title">
+                    Folder
+                </div>
+            </a>
+            <a href="https://github.com/maxuiux/muiuxos/blob/main/README.md" class="desktop-app__item desktop-app__item_info" data-title="Copyright an Credits" target="_blank">
+                <div class="desktop-app__item-icon">
+                    <img src="img/sprite.svg#app-info" alt="">
+                </div>
+                <div class="desktop-app__item-title">
+                    Info Project
+                </div>
+            </a>
+            <a href="#info" class="desktop-app__item desktop-app__item_table" data-title="Table">
+                <div class="desktop-app__item-icon">
+                    <img src="img/sprite.svg#icon-table" alt="">
+                </div>
+                <div class="desktop-app__item-title">
+                    Table
+                </div>
+            </a>
+            <a href="#info" class="desktop-app__item desktop-app__item_doc" data-title="Doc">
+                <div class="desktop-app__item-icon">
+                    <img src="img/sprite.svg#icon-doc" alt="">
+                </div>
+                <div class="desktop-app__item-title">
+                    Doc
+                </div>
+            </a>
+            <a href="#info" class="desktop-app__item desktop-app__item_slides" data-title="Slides">
+                <div class="desktop-app__item-icon">
+                    <img src="img/sprite.svg#icon-slides" alt="">
+                </div>
+                <div class="desktop-app__item-title">
+                    Slides
+                </div>
+            </a>
+            <a href="#basket" class="desktop-app__item desktop-app__item_basket" data-title="Basket">
+                <div class="desktop-app__item-icon">
+                    <img src="img/sprite.svg#app-full-basket"" alt="">
+                </div>
+                <div class=" desktop-app__item-title">
+                    Basket
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="top-widgets">
+    <div class="top-widgets__inner">
+        <div class="widget-time top-widgets__item">
+            <div id="time-2" class="widget-time__time"></div>
+            <div id="date-2" class="widget-time__date top-widgets__item-date"></div>
+        </div>
+        <div class="top-widgets__item">
+            <div class="widget-battery">
+                <div class="widget-battery-charge"></div>
+                <div class="widget-battery-charge-positive"></div>
+            </div>
+        </div>
+        <div class="top-widgets__item">
+            <div class="widget-weather">
+                <div class="widget-weather-sun"></div>
+                <div class="widget-weather-title">
+                    18°C
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="navigation">
+    <div class="navigation__inner">
+        <div class="navigation-info">
+            <div class="navigation-info__items">
+                <div class="navigation-info__item" data-title="Center">
+                    <div class="navigation-center">
+                        <div class="navigation-center__inner">
+                            <div class="navigation-center__item">
+                                <div class="navigation-center__item-avatar">
+                                    <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/avatars/avatar-01.png"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation-info__item" data-title="Time">
+                    <div class="navigation-info__item-time">
+                        <div id="time-3" class="widget-time__time"></div>
+                        <div id="date-3" class="widget-time__date navigation-info__item-date"></div>
+                    </div>
+                </div>
+                <div class="navigation-info__item" data-title="Device charge">
+                    <div class="widget-battery navigation-info__item-battery">
+                        <div class="widget-battery-charge"></div>
+                        <div class="widget-battery-charge-positive"></div>
+                    </div>
+                </div>
+                <div class="navigation-info__item weather-btn" data-title="Weather">
+                    <div class="widget-weather navigation-info__item-weather">
+                        <div class="widget-weather-sun"></div>
+                        <div class="widget-weather-title navigation-info__item-weather_title">
+                            18°C
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation-info__item" data-title="Search">
+                    <div class="navigation-info__item-search">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation__items">
+            <div class="navigation__item btn-browser" data-title="Browser">
+                <div class="navigation-preview-item">
+                    <div class="navigation-preview-item__inner">
+                        <div class="navigation-preview-item__top">
+                            <div class="navigation-preview-item__top-title">
+                                Browser
+                            </div>
+                            <div class="navigation-preview-item__top-close">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="navigation-preview-item__wrapper">
+                            <img src="img/preview-app-02.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation__item-icon">
+                    <img src="img/sprite.svg#app-browser" alt="">
+                </div>
+            </div>
+            <div class="navigation__item btn-console" data-title="Console">
+                <div class="navigation-preview-item">
+                    <div class="navigation-preview-item__inner">
+                        <div class="navigation-preview-item__top">
+                            <div class="navigation-preview-item__top-title">
+                                Console
+                            </div>
+                            <div class="navigation-preview-item__top-close">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="navigation-preview-item__wrapper">
+                            <img src="img/preview-app-01.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation__item-icon">
+                    <img src="img/sprite.svg#app-console" alt="">
+                </div>
+            </div>
+            <div class="navigation__item" data-title="Calculator">
+                <div class="navigation__item-icon">
+                    <img src="img/sprite.svg#app-calculator" alt="">
+                </div>
+            </div>
+            <div class="navigation__item" data-title="Games">
+                <div class="navigation__item-icon">
+                    <img src="img/sprite.svg#app-games" alt="">
+                </div>
+            </div>
+            <div class="navigation__item" data-title="Marketplace">
+                <div class="navigation__item-icon">
+                    <img src="img/sprite.svg#app-marketplace" alt="">
+                </div>
+            </div>
+            <div class="navigation__item" data-title="Notes">
+                <div class="navigation__item-icon">
+                    <img src="img/sprite.svg#app-notes" alt="">
+                </div>
+            </div>
+            <div class="navigation__item" data-title="Graphic Design">
+                <div class="navigation__item-icon">
+                    <img src="img/sprite.svg#app-graphic-design" alt="">
+                </div>
+            </div>
+            <div class="navigation__item" data-title="Table">
+                <div class="navigation__item-icon">
+                    <img src="img/sprite.svg#icon-table" alt="">
+                </div>
+            </div>
+            <div class="navigation__item" data-title="Doc">
+                <div class="navigation__item-icon">
+                    <img src="img/sprite.svg#icon-doc" alt="">
+                </div>
+            </div>
+            <div class="navigation__item" data-title="Slides">
+                <div class="navigation__item-icon">
+                    <img src="img/sprite.svg#icon-slides" alt="">
+                </div>
+            </div>
+            <div class="navigation__item" data-title="System Settings">
+                <div class="navigation__item-icon">
+                    <img src="img/sprite.svg#app-settings" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="navigation-options">
+            <div class="navigation-options__inner">
+                <div class="modal modal-nav-wifi2 navigation-options-wifi" id="modal">
+                    <div class="modal-top-info modal-nav-wifi__main">
+                        <div class="modal-nav-wifi__title">
+                            WiFi
+                        </div>
+                        <div class="modal-nav-wifi__checkbox">
+                            <label>
+                                <input id="checkbox-wifi-btn2" type="checkbox" class="checkbox-active" value="true">
+                                <span class="checkbox-active-style"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="modal-nav-wifi2" class="modal__inner modal-nav-wifi__inner">
+                        <div class="modal__item modal-nav-wifi__item modal-nav-wifi__item-active">
+                            <div class="modal-nav-wifi__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-nav-wifi__wrapper">
+                                <div class="modal-nav-wifi__wrapper-title">
+                                    MuiuxOS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__item modal-nav-wifi__item modal-nav-wifi__item">
+                            <div class="modal-nav-wifi__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-nav-wifi__wrapper">
+                                <div class="modal-nav-wifi__wrapper-title">
+                                    AdminWiFi 3366
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__item modal-nav-wifi__item">
+                            <div class="modal-nav-wifi__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-nav-wifi__wrapper">
+                                <div class="modal-nav-wifi__wrapper-title">
+                                    KRY WI FI
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__item modal-nav-wifi__item">
+                            <div class="modal-nav-wifi__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-nav-wifi__wrapper">
+                                <div class="modal-nav-wifi__wrapper-title">
+                                    Win 11
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__item modal-nav-wifi__item">
+                            <div class="modal-nav-wifi__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-nav-wifi__wrapper">
+                                <div class="modal-nav-wifi__wrapper-title">
+                                    Mac OS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__item modal-nav-wifi__item">
+                            <div class="modal-nav-wifi__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-nav-wifi__wrapper">
+                                <div class="modal-nav-wifi__wrapper-title">
+                                    AndroidER 77
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__item modal-nav-wifi__item">
+                            <div class="modal-nav-wifi__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-nav-wifi__wrapper">
+                                <div class="modal-nav-wifi__wrapper-title">
+                                    iOsEr 51
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__item modal-nav-wifi__item">
+                            <div class="modal-nav-wifi__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-nav-wifi__wrapper">
+                                <div class="modal-nav-wifi__wrapper-title">
+                                    SUN Wi-Fi
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__item modal-nav-wifi__item">
+                            <div class="modal-nav-wifi__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-nav-wifi__wrapper">
+                                <div class="modal-nav-wifi__wrapper-title">
+                                    Bill Gates
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__item modal-nav-wifi__item">
+                            <div class="modal-nav-wifi__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-nav-wifi__wrapper">
+                                <div class="modal-nav-wifi__wrapper-title">
+                                    Steve Jobs
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__item modal-nav-wifi__item">
+                            <div class="modal-nav-wifi__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-nav-wifi__wrapper">
+                                <div class="modal-nav-wifi__wrapper-title">
+                                    Andy Rubin
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__item modal-nav-wifi__item">
+                            <div class="modal-nav-wifi__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-nav-wifi__wrapper">
+                                <div class="modal-nav-wifi__wrapper-title">
+                                    Rich Miner
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__item modal-nav-wifi__item">
+                            <div class="modal-nav-wifi__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-nav-wifi__wrapper">
+                                <div class="modal-nav-wifi__wrapper-title">
+                                    Nick Sears
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__item modal-nav-wifi__item">
+                            <div class="modal-nav-wifi__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-nav-wifi__wrapper">
+                                <div class="modal-nav-wifi__wrapper-title">
+                                    Chris White
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__item modal-nav-wifi__item">
+                            <div class="modal-nav-wifi__icon">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                </svg>
+                            </div>
+                            <div class="modal-nav-wifi__wrapper">
+                                <div class="modal-nav-wifi__wrapper-title">
+                                    Maxuiux
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal music">
+                    <div class="music__inner">
+                        <div class="music__item">
+                            <div class="music__item-img">
+                                <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/music/bg-music-12.png"
+                                    alt="">
+                            </div>
+                            <div class="music__item-title">
+                                <span>
+                                    Nav Type 3 - by Arulo mixkit.co
+                                </span>
+                                <div class="music-copy-name">
+                                    <div class="music-copy-name__btn">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#icon-copy"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="player">
+                                <audio id="av-tag" controls class="biba">
+                                    <source src="sound/mixkit-nav-type-3-261.mp3" type="audio/mp3">
+                                    Your browser does not support the audio element.
+                                </audio>
+                                <div class="player__inner">
+                                    <input id="cur-time" type="range" min="0" max="10" step="0">
+                                    <div class="player__time play-time">1:00</div>
+                                </div>
+                                <div class="player__buttons">
+                                    <div class="player__previos">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#icon-previos"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="player__buttons-item">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#icon-rewind"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="player__btn">
+                                        <button class="play-btn player__btn-inner">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-play"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="player__buttons-item">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#icon-forward"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="player__next">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#icon-next"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="player__volume">
+                                    <div id="speaker" class="player__volume-icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#volume-up"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="player__volume-item">
+                                        <div>
+                                            <input id="volume" type="range" min="0" max="10">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="music-nav">
+                                    <div class="music-nav__inner">
+                                        <div class="music-nav__item">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-tune"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="music-nav__item">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-replay"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="music-nav__item">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-stop"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="music-nav__item">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-repeat"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="music-nav__item btn-music-playlist">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-music-playlist"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="music-playlist__inner">
+                        <div class="modal-top-info music-playlist__title">
+                            Music Playlist
+                            <svg>
+                                <use xlink:href="img/sprite.svg#icon-music-playlist"></use>
+                            </svg>
+                        </div>
+                        <div class="music-playlist__wrapper">
+                            <div class="music-playlist__item music-playlist__item-active">
+                                <div class="music-playlist__item-img">
+                                    <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/music/bg-music-12.png"
+                                        alt="">
+                                </div>
+                                <div class="music-playlist__item-icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-pause"></use>
+                                    </svg>
+                                </div>
+                                <div class="music-playlist__item-inner">
+                                    <div class="music-playlist__item-title">
+                                        Nav Type 3
+                                    </div>
+                                    <div class="music-playlist__item-timer">
+                                        <span>
+                                            by Arulo mixkit.co
+                                        </span>
+                                        <span>
+                                            1:48
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="music-playlist__item">
+                                <div class="music-playlist__item-img">
+                                    <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/music/bg-music-11.png"
+                                        alt="">
+                                </div>
+                                <div class="music-playlist__item-icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-play"></use>
+                                    </svg>
+                                </div>
+                                <div class="music-playlist__item-inner">
+                                    <div class="music-playlist__item-title">
+                                        Nav Type 3
+                                    </div>
+                                    <div class="music-playlist__item-timer">
+                                        <span>
+                                            by Arulo mixkit.co
+                                        </span>
+                                        <span>
+                                            3:01
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="music-playlist__item">
+                                <div class="music-playlist__item-img">
+                                    <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/music/bg-music-10.png"
+                                        alt="">
+                                </div>
+                                <div class="music-playlist__item-icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-play"></use>
+                                    </svg>
+                                </div>
+                                <div class="music-playlist__item-inner">
+                                    <div class="music-playlist__item-title">
+                                        Nav Type 3
+                                    </div>
+                                    <div class="music-playlist__item-timer">
+                                        <span>
+                                            by Arulo mixkit.co
+                                        </span>
+                                        <span>
+                                            2:20
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="music-playlist__item">
+                                <div class="music-playlist__item-img">
+                                    <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/music/bg-music-09.png"
+                                        alt="">
+                                </div>
+                                <div class="music-playlist__item-icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-play"></use>
+                                    </svg>
+                                </div>
+                                <div class="music-playlist__item-inner">
+                                    <div class="music-playlist__item-title">
+                                        Nav Type 3
+                                    </div>
+                                    <div class="music-playlist__item-timer">
+                                        <span>
+                                            by Arulo mixkit.co
+                                        </span>
+                                        <span>
+                                            1:36
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="music-playlist__item">
+                                <div class="music-playlist__item-img">
+                                    <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/music/bg-music-08.png"
+                                        alt="">
+                                </div>
+                                <div class="music-playlist__item-icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-play"></use>
+                                    </svg>
+                                </div>
+                                <div class="music-playlist__item-inner">
+                                    <div class="music-playlist__item-title">
+                                        Nav Type 3
+                                    </div>
+                                    <div class="music-playlist__item-timer">
+                                        <span>
+                                            by Arulo mixkit.co
+                                        </span>
+                                        <span>
+                                            2:53
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="music-playlist__item">
+                                <div class="music-playlist__item-img">
+                                    <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/music/bg-music-07.png"
+                                        alt="">
+                                </div>
+                                <div class="music-playlist__item-icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-play"></use>
+                                    </svg>
+                                </div>
+                                <div class="music-playlist__item-inner">
+                                    <div class="music-playlist__item-title">
+                                        Nav Type 3
+                                    </div>
+                                    <div class="music-playlist__item-timer">
+                                        <span>
+                                            by Arulo mixkit.co
+                                        </span>
+                                        <span>
+                                            1:44
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="music-playlist__item">
+                                <div class="music-playlist__item-img">
+                                    <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/music/bg-music-06.png"
+                                        alt="">
+                                </div>
+                                <div class="music-playlist__item-icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-play"></use>
+                                    </svg>
+                                </div>
+                                <div class="music-playlist__item-inner">
+                                    <div class="music-playlist__item-title">
+                                        Nav Type 3
+                                    </div>
+                                    <div class="music-playlist__item-timer">
+                                        <span>
+                                            by Arulo mixkit.co
+                                        </span>
+                                        <span>
+                                            0:54
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="music-playlist__item">
+                                <div class="music-playlist__item-img">
+                                    <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/music/bg-music-05.png"
+                                        alt="">
+                                </div>
+                                <div class="music-playlist__item-icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-play"></use>
+                                    </svg>
+                                </div>
+                                <div class="music-playlist__item-inner">
+                                    <div class="music-playlist__item-title">
+                                        Nav Type 3
+                                    </div>
+                                    <div class="music-playlist__item-timer">
+                                        <span>
+                                            by Arulo mixkit.co
+                                        </span>
+                                        <span>
+                                            3:12
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="music-playlist__item">
+                                <div class="music-playlist__item-img">
+                                    <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/music/bg-music-04.png"
+                                        alt="">
+                                </div>
+                                <div class="music-playlist__item-icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-play"></use>
+                                    </svg>
+                                </div>
+                                <div class="music-playlist__item-inner">
+                                    <div class="music-playlist__item-title">
+                                        Nav Type 3
+                                    </div>
+                                    <div class="music-playlist__item-timer">
+                                        <span>
+                                            by Arulo mixkit.co
+                                        </span>
+                                        <span>
+                                            6:03
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="music-playlist__item">
+                                <div class="music-playlist__item-img">
+                                    <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/music/bg-music-03.png"
+                                        alt="">
+                                </div>
+                                <div class="music-playlist__item-icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-play"></use>
+                                    </svg>
+                                </div>
+                                <div class="music-playlist__item-inner">
+                                    <div class="music-playlist__item-title">
+                                        Nav Type 3
+                                    </div>
+                                    <div class="music-playlist__item-timer">
+                                        <span>
+                                            by Arulo mixkit.co
+                                        </span>
+                                        <span>
+                                            2:03
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="music-playlist__item">
+                                <div class="music-playlist__item-img">
+                                    <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/music/bg-music-02.png"
+                                        alt="">
+                                </div>
+                                <div class="music-playlist__item-icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-play"></use>
+                                    </svg>
+                                </div>
+                                <div class="music-playlist__item-inner">
+                                    <div class="music-playlist__item-title">
+                                        Nav Type 3
+                                    </div>
+                                    <div class="music-playlist__item-timer">
+                                        <span>
+                                            by Arulo mixkit.co
+                                        </span>
+                                        <span>
+                                            1:53
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="music-playlist__item">
+                                <div class="music-playlist__item-img">
+                                    <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/music/bg-music-01.png"
+                                        alt="">
+                                </div>
+                                <div class="music-playlist__item-icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-play"></use>
+                                    </svg>
+                                </div>
+                                <div class="music-playlist__item-inner">
+                                    <div class="music-playlist__item-title">
+                                        Nav Type 3
+                                    </div>
+                                    <div class="music-playlist__item-timer">
+                                        <span>
+                                            by Arulo mixkit.co
+                                        </span>
+                                        <span>
+                                            2:19
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="music-playlist__nav">
+                            <div class="music-playlist__nav-item">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#icon-arrow-back"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal modal-modifi modal-modifi-pos2">
+                    <div class="modal__inner modal-modifi__inner">
+                        <div class="modal__item modal-modifi__item">
+                            <div class="modal-modifi-nav">
+                                <div class="modal-modifi-nav__item" data-title="Security">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-security"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal-modifi-nav__item" data-title="USB Connect">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-usb"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal-modifi-nav__item" data-title="Dark Mode">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-dark-mode"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal-modifi-nav__item" data-title="Printer">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-printer"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal-modifi-nav__item" data-title="Watch">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-watch"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal-modifi-nav__item" data-title="Webcam">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-webcam"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal-modifi-nav__item" data-title="Devices">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-devices"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal-modifi-nav__item" data-title="Health Data">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-health-data"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal-modifi-nav__item" data-title="Game Mode">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-game-mode"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal-modifi-nav__item" data-title="Airplane Mode">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-airplane-mode"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal-modifi-nav__item" data-title="Bookmarks">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-bookmarks"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal-modifi-nav__item" data-title="Location">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-location"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal-modifi-nav__item" data-title="Charging Stations">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-charging-stations"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal-modifi-nav__item" data-title="Bitcoin">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-bitcoin"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal-modifi-nav__item" data-title="Timer">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-timer"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal-modifi-nav__item" data-title="Blocking">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-blocking"></use>
+                                    </svg>
+                                </div>
+                                <div class="modal-modifi-nav__item" data-title="Bluetooth">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-bluetooth"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__item modal-modifi__item">
+                            <div class="modal-modifi-value">
+                                <div class="modal-modifi-value__item" data-title="Brightness">
+                                    <div class="modal-modifi-value__item-icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#icon-brightness"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="modal-modifi-value__item-slider">
+                                        <div id="slider3"></div>
+                                    </div>
+                                </div>
+                                <div class="modal-modifi-value__item" data-title="Volume">
+                                    <div class="modal-modifi-value__item-icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#volume-up"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="modal-modifi-value__item-slider">
+                                        <div id="slider4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation-options__add-item" data-title="Add App"></div>
+                <div class="navigation-options__items">
+                    <div class="navigation-options__item-btn music-btn" data-title="Music">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#icon-music"></use>
+                        </svg>
+                    </div>
+                    <div class="navigation-options__item-btn folder-btn" data-title="Folder">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#icon-folder"></use>
+                        </svg>
+                    </div>
+                    <div class="navigation-options__item-btn apps-btn" data-title="Apps">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#icon-apps"></use>
+                        </svg>
+                    </div>
+                    <div class="navigation-options__item-btn volume-btn2" data-title="Sound Volume">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#volume-up"></use>
+                        </svg>
+                    </div>
+                    <div class="navigation-options__item-btn wifi-btn2" data-title="WiFi">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#wifi"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="navigation-options__fold" data-title="Collapse All"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</span>
+
+<div class="backgrounds">
+    <div class="backgrounds__inner">
+        <div class="background__item">
+            <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/scale/background-05_scalex2.png"
+                alt="">
+        </div>
+    </div>
+</div>
+
+<span id="remove" class="remove">
+        <div class="lockscreen">
+            <div class="lockscreen-widgets">
+                <div class="lockscreen-widgets__wrapper">
+                    <div class="lockscreen-widgets__inner">
+                        <div class="widget-time lockscreen-widgets__item">
+                            <div id="time" class="widget-time__time"></div>
+                            <div id="date" class="widget-time__date lockscreen-widgets__item-date"></div>
+                        </div>
+                        <div class="lockscreen-widgets__item">
+                            <div class="widget-battery">
+                                <div class="widget-battery-charge"></div>
+                                <div class="widget-battery-charge-positive"></div>
+                            </div>
+                        </div>
+                        <div class="lockscreen-widgets__item">
+                            <div class="widget-weather">
+                                <div class="widget-weather-sun"></div>
+                                <div class="widget-weather-title">
+                                    18°C
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lockscreen-widgets__nav">
+                        <div class="modal modal-nav-wifi" id="modal">
+                            <div class="modal-top-info modal-nav-wifi__main">
+                                <div class="modal-nav-wifi__title">
+                                    WiFi
+                                </div>
+                                <div class="modal-nav-wifi__checkbox">
+                                    <label>
+                                        <input id="checkbox-wifi-btn" type="checkbox" class="checkbox-active" value="true">
+                                        <span class="checkbox-active-style"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="modal-nav-wifi" class="modal__inner modal-nav-wifi__inner">
+                                <div class="modal__item modal-nav-wifi__item modal-nav-wifi__item-active">
+                                    <div class="modal-nav-wifi__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="modal-nav-wifi__wrapper">
+                                        <div class="modal-nav-wifi__wrapper-title">
+                                            MuiuxOS
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__item modal-nav-wifi__item modal-nav-wifi__item">
+                                    <div class="modal-nav-wifi__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="modal-nav-wifi__wrapper">
+                                        <div class="modal-nav-wifi__wrapper-title">
+                                            AdminWiFi 3366
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__item modal-nav-wifi__item">
+                                    <div class="modal-nav-wifi__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="modal-nav-wifi__wrapper">
+                                        <div class="modal-nav-wifi__wrapper-title">
+                                            KRY WI FI
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__item modal-nav-wifi__item">
+                                    <div class="modal-nav-wifi__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="modal-nav-wifi__wrapper">
+                                        <div class="modal-nav-wifi__wrapper-title">
+                                            Win 11
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__item modal-nav-wifi__item">
+                                    <div class="modal-nav-wifi__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="modal-nav-wifi__wrapper">
+                                        <div class="modal-nav-wifi__wrapper-title">
+                                            Mac OS
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__item modal-nav-wifi__item">
+                                    <div class="modal-nav-wifi__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="modal-nav-wifi__wrapper">
+                                        <div class="modal-nav-wifi__wrapper-title">
+                                            AndroidER 77
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__item modal-nav-wifi__item">
+                                    <div class="modal-nav-wifi__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="modal-nav-wifi__wrapper">
+                                        <div class="modal-nav-wifi__wrapper-title">
+                                            iOsEr 51
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__item modal-nav-wifi__item">
+                                    <div class="modal-nav-wifi__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="modal-nav-wifi__wrapper">
+                                        <div class="modal-nav-wifi__wrapper-title">
+                                            SUN Wi-Fi
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__item modal-nav-wifi__item">
+                                    <div class="modal-nav-wifi__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="modal-nav-wifi__wrapper">
+                                        <div class="modal-nav-wifi__wrapper-title">
+                                            Bill Gates
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__item modal-nav-wifi__item">
+                                    <div class="modal-nav-wifi__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="modal-nav-wifi__wrapper">
+                                        <div class="modal-nav-wifi__wrapper-title">
+                                            Steve Jobs
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__item modal-nav-wifi__item">
+                                    <div class="modal-nav-wifi__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="modal-nav-wifi__wrapper">
+                                        <div class="modal-nav-wifi__wrapper-title">
+                                            Andy Rubin
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__item modal-nav-wifi__item">
+                                    <div class="modal-nav-wifi__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="modal-nav-wifi__wrapper">
+                                        <div class="modal-nav-wifi__wrapper-title">
+                                            Rich Miner
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__item modal-nav-wifi__item">
+                                    <div class="modal-nav-wifi__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="modal-nav-wifi__wrapper">
+                                        <div class="modal-nav-wifi__wrapper-title">
+                                            Nick Sears
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__item modal-nav-wifi__item">
+                                    <div class="modal-nav-wifi__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="modal-nav-wifi__wrapper">
+                                        <div class="modal-nav-wifi__wrapper-title">
+                                            Chris White
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__item modal-nav-wifi__item">
+                                    <div class="modal-nav-wifi__icon">
+                                        <svg>
+                                            <use xlink:href="img/sprite.svg#wifi-password"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="modal-nav-wifi__wrapper">
+                                        <div class="modal-nav-wifi__wrapper-title">
+                                            Maxuiux
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal modal-modifi modal-modifi-pos">
+                            <div class="modal__inner modal-modifi__inner">
+                                <div class="modal__item modal-modifi__item">
+                                    <div class="modal-modifi-nav">
+                                        <div class="modal-modifi-nav__item" data-title="Security">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-security"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="modal-modifi-nav__item" data-title="USB Connect">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-usb"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="modal-modifi-nav__item" data-title="Dark Mode">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-dark-mode"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="modal-modifi-nav__item" data-title="Printer">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-printer"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="modal-modifi-nav__item" data-title="Watch">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-watch"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="modal-modifi-nav__item" data-title="Webcam">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-webcam"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="modal-modifi-nav__item" data-title="Devices">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-devices"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="modal-modifi-nav__item" data-title="Health Data">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-health-data"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="modal-modifi-nav__item" data-title="Game Mode">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-game-mode"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="modal-modifi-nav__item" data-title="Airplane Mode">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-airplane-mode"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="modal-modifi-nav__item" data-title="Bookmarks">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-bookmarks"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="modal-modifi-nav__item" data-title="Location">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-location"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="modal-modifi-nav__item" data-title="Charging Stations">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-charging-stations"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="modal-modifi-nav__item" data-title="Bitcoin">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-bitcoin"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="modal-modifi-nav__item" data-title="Timer">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-timer"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="modal-modifi-nav__item" data-title="Blocking">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-blocking"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="modal-modifi-nav__item" data-title="Bluetooth">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#icon-bluetooth"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__item modal-modifi__item">
+                                    <div class="modal-modifi-value">
+                                        <div class="modal-modifi-value__item" data-title="Brightness">
+                                            <div class="modal-modifi-value__item-icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#icon-brightness"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="modal-modifi-value__item-slider">
+                                                <div id="slider"></div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-modifi-value__item" data-title="Volume">
+                                            <div class="modal-modifi-value__item-icon">
+                                                <svg>
+                                                    <use xlink:href="img/sprite.svg#volume-up"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="modal-modifi-value__item-slider">
+                                                <div id="slider2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lockscreen-widgets__nav-inner">
+                            <div class="lockscreen-widgets__nav-btn volume-btn">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#volume-up"></use>
+                                </svg>
+                            </div>
+                            <div class="lockscreen-widgets__nav-btn wifi-btn">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#wifi"></use>
+                                </svg>
+                            </div>
+                            <a href="/" class="lockscreen-widgets__nav-btn">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#refresh"></use>
+                                </svg>
+                            </a>
+                            <a href="../off.html" class="lockscreen-widgets__nav-btn">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#sleep-mode"></use>
+                                </svg>
+                            </a>
+                            <a href="../off.html" class="lockscreen-widgets__nav-btn">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#turn-off"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lockscreen__inner">
+                <div class="lockscreen__item">
+                    <div class="lockscreen__avatar">
+                        <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/avatars/avatar-01.png"
+                            alt="">
+                    </div>
+                    <div class="lockscreen__name">
+                        Maxuiux
+                    </div>
+                    <div class="lockscreen__password-form">
+                        <input class="lockscreen__password" id="password" type="password" required="required">
+                        <button class="login-form__btn" id="check">Enter</button>
+                    </div>
+                    <div class="lockscreen__hint">
+                        <span>
+                            password: admin6&33
+                        </span>
+                    </div>
+                </div>
+                <div class="lockscreen__users">
+                    <div class="lockscreen__user">
+                        <div class="lockscreen__user-img">
+                            <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/avatars/avatar-02.png"
+                                alt="">
+                        </div>
+                        <div class="lockscreen__user-title">
+                            Oliver
+                        </div>
+                    </div>
+                    <div class="lockscreen__user">
+                        <div class="lockscreen__user-img">
+                            <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/avatars/avatar-03.png"
+                                alt="">
+                        </div>
+                        <div class="lockscreen__user-title">
+                            Emma
+                        </div>
+                    </div>
+                    <div class="lockscreen__user">
+                        <div class="lockscreen__user-img">
+                            <img src="https://raw.githubusercontent.com/maxuiux/codepen/main/images/muiuxos/avatars/avatar-04.png"
+                                alt="">
+                        </div>
+                        <div class="lockscreen__user-title">
+                            Maria
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</span>
+
+
+	
+	<footer class="footer"></footer>
+
+	<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>
