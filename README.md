@@ -50,7 +50,7 @@ maxuiux OS PC
 - [https://mixkit.co/](https://mixkit.co/)
 
 ## About & license
-The author of the product is Maxim, all ideas are Maxim's.
+The author of the product is maxuiux, all ideas are maxuiux.
 
 At the moment, the product has been created solely for demonstration purposes to attract investors and people to evaluate it.
 
