@@ -41,6 +41,9 @@ maxuiux OS PC
 ### Fonts
 - [Poppins](https://fonts.google.com/specimen/Poppins)
 
+### Google Icons
+- [Material Symbols](https://fonts.google.com/icons)
+
 ### Weather Animation JS
 - Author aymks
 - [credits to](https://codepen.io/Nvagelis/pen/yaQGrL)
