@@ -63,4 +63,4 @@ There is no source code in the public domain, so you can't modify the operating 
 
 ## Contact
 - If you are interested in sponsoring or being an investor in a project
-- [maxuiuxofficial@gmail.com](mailto:maxuiuxofficial@gmail.com)
+- [muiuxos@gmail.com](mailto:muiuxos@gmail.com)
